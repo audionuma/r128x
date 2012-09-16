@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1187">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  </style>
+</head>
+<body>
+<p class="p1">v 0.1 2012-09-16</p>
+<p class="p1"><b>r128x, a command line tool for loudness measurement of files on Mac OSX Intel.</b></p>
+<p class="p2"><br></p>
+<p class="p3"><b>Description</b></p>
+<p class="p3">r128x is a command line tool for measuring Integrated Loudness, Loudness range and Maximum True Peak of audio files on the Mac OS X system with an Intel processor.</p>
+<p class="p3">It uses libebeur128 (https://github.com/jiixyj/libebur128) for the Integrated Loudness and Loudness Range measures.</p>
+<p class="p3">It uses CoreAudio's AudioConverter service to oversample audio data and obtain the Maximum True Peak.</p>
+<p class="p3">It uses CoreAudio ExtAudioFile's service to read the samples from an audio file.</p>
+<p class="p2"><br></p>
+<p class="p3"><b>Installation</b></p>
+<p class="p3">You can build the executable from the Xcode project, or use the provided executable.</p>
+<p class="p3">/usr/local/bin/ should be a nice place to put the binary if you want it to be in your $PATH.</p>
+<p class="p2"><br></p>
+<p class="p3"><b>Usage</b></p>
+<p class="p3">r128x /some/audio/file.wav</p>
+<p class="p3">will print out the full file path, the Integrated Loudness in LUFS, the Loudness range in LU, the Maximum True Peak in dBTP.</p>
+<p class="p3">Will print an error message in case of unsupported file or if an error occurs during processing.</p>
+<p class="p2"><b></b><br></p>
+<p class="p3"><b>Issues</b></p>
+<p class="p3">Channel mapping is static, using the default libebur128 channel mapping :</p>
+<p class="p3">L / R / C / LFE / Ls / Rs.</p>
+<p class="p3">You will have incorrect results if your file's channels mapping is different.</p>
+</body>
+</html>

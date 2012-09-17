@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1187">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {font: 12.0px Courier}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><b>guide utilisateur r128x</b></p>
+<p class="p1">v 0.1</p>
+<p class="p1">17/09/2012</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Installation</b></p>
+<p class="p1">Pour utiliser r128x, vous devez simplement copier le fichier exécutable r128x sur votre disque dur.</p>
+<p class="p1">Vous pouvez par exemple le copier dans le répertoire <span class="s1">/usr/local/bin/</span> :</p>
+<p class="p2"><br></p>
+<p class="p1">Montez l'image disque r128x_0_1.dmg en double-cliquant dessus.</p>
+<p class="p1">Lancez l'application Terminal.app.</p>
+<p class="p1">Dans le Terminal, exécutez la commande suivante (Attention : s'il il y a déjà un fichier nommé r128x dans le répertoire <span class="s1">/usr/local/bin/</span>, il sera remplacé sans avertissement) ;</p>
+<p class="p3">sudo cp /Volumes/r128x_0_1/r128x /usr/local/bin/</p>
+<p class="p1">Le Terminal vous demande un mot de passe administrateur. Saisissez votre mot de passe administrateur (qui n'est pas affiché) et pressez retour pour valider.</p>
+<p class="p2"><br></p>
+<p class="p1">Vous pouvez vérifier que la copie est bien effectuée en exécutant la commande suivante dans le Terminal :</p>
+<p class="p3">which r128x</p>
+<p class="p1">qui devrait afficher :</p>
+<p class="p3">/usr/local/bin/r128x</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Utilisation</b></p>
+<p class="p1">r128x essayera d'analyser tous les fichiers passés en arguments lorsque vous l'invoquez depuis le Terminal.</p>
+<p class="p1">Truc : vous pouvez glisser/déposer du Finder vers le Terminal pour ajouter des fichiers à analyser.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">Exemple 1 : analyser un fichier.</p>
+<p class="p2"><br></p>
+<p class="p3">Macintosh:~ manunaudin$ r128x /Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/1kHz\ Sine\ -20\ LUFS-16bit.wav<span class="Apple-converted-space"> </span></p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/1kHz Sine -20 LUFS-16bit.wav<span class="Apple-tab-span">	</span>-20.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-19.9</p>
+<p class="p3">Macintosh:~ manunaudin$</p>
+<p class="p2"><br></p>
+<p class="p1">La seconde ligne est le résultat de l'analyse et indique la chemin complet du fichier, le Loudness Intégré en LUFS, le Loudness Range en LU et le Maximum True Peak en dBTP.</p>
+<p class="p1">Si un fichier n'a pas pu être analysé, vous obtiendrez un message d'erreur.</p>
+<p class="p2"><br></p>
+<p class="p1">Exemple 2 : essai d'analyse d'un fichier non pris en charge.</p>
+<p class="p2"><br></p>
+<p class="p3">Macintosh:~ manunaudin$ r128x /Users/manunaudin/Rplots.pdf<span class="Apple-converted-space"> </span></p>
+<p class="p3">An error occured while trying to open/read/process file /Users/manunaudin/Rplots.pdf</p>
+<p class="p3">Macintosh:~ manunaudin$<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">Vous pouvez analyser plusieurs fichiers à la fois en les passant comme arguments successifs</p>
+<p class="p2"><br></p>
+<p class="p1">Exemple 3 : analyse de plusieurs fichiers.</p>
+<p class="p2"><br></p>
+<p class="p3">Macintosh:~ manunaudin$ r128x /Users/manunaudin/Documents/audio/1063721.wav /Users/manunaudin/Documents/audio/1063811.wav<span class="Apple-converted-space"> </span></p>
+<p class="p3">/Users/manunaudin/Documents/audio/1063721.wav<span class="Apple-tab-span">	</span>-21.1<span class="Apple-tab-span">	</span>1.8<span class="Apple-tab-span">	</span>-9.3</p>
+<p class="p3">/Users/manunaudin/Documents/audio/1063811.wav<span class="Apple-tab-span">	</span>-22.0<span class="Apple-tab-span">	</span>10.3<span class="Apple-tab-span">	</span>-13.0</p>
+<p class="p3">Macintosh:~ manunaudin$<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">Vous pouvez analyser plusieurs/tous les fichiers d'un répertoire en utilisant les jockers.</p>
+<p class="p2"><br></p>
+<p class="p1">Exemple 4 : analyse de plusieurs fichiers avec le jocker.</p>
+<p class="p2"><br></p>
+<p class="p3">Macintosh:~ manunaudin$ r128x /Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/*.wav</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/1kHz Sine -20 LUFS-16bit.wav<span class="Apple-tab-span">	</span>-20.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-19.9</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/1kHz Sine -26 LUFS-16bit.wav<span class="Apple-tab-span">	</span>-26.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-25.9</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/1kHz Sine -40 LUFS-16bit.wav<span class="Apple-tab-span">	</span>-40.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-39.8</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-1-16bit.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-22.9</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-2-16bit.wav<span class="Apple-tab-span">	</span>-33.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-32.8</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-2011-8_seq-3342-6-24bit-v02.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>15.0<span class="Apple-tab-span">	</span>-2.6</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-3-16bit-v02.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>13.0<span class="Apple-tab-span">	</span>-23.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-4-16bit-v02.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>13.0<span class="Apple-tab-span">	</span>-23.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-5-16bit-v02.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>6.0<span class="Apple-tab-span">	</span>-20.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-6-5channels-16bit.wav<span class="Apple-tab-span">	</span>-23.7<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-24.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-6-6channels-WAVEEX-16bit.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>0.0<span class="Apple-tab-span">	</span>-24.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3341-7_seq-3342-5-24bit.wav<span class="Apple-tab-span">	</span>-23.0<span class="Apple-tab-span">	</span>5.0<span class="Apple-tab-span">	</span>-8.9</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3342-1-16bit.wav<span class="Apple-tab-span">	</span>-22.6<span class="Apple-tab-span">	</span>10.0<span class="Apple-tab-span">	</span>-20.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3342-2-16bit.wav<span class="Apple-tab-span">	</span>-16.8<span class="Apple-tab-span">	</span>5.0<span class="Apple-tab-span">	</span>-15.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3342-3-16bit.wav<span class="Apple-tab-span">	</span>-20.0<span class="Apple-tab-span">	</span>20.0<span class="Apple-tab-span">	</span>-20.0</p>
+<p class="p3">/Users/manunaudin/Documents/audio/loud_test_files/ebu-loudness-test-setv03/seq-3342-4-16bit.wav<span class="Apple-tab-span">	</span>-24.5<span class="Apple-tab-span">	</span>15.0<span class="Apple-tab-span">	</span>-20.0</p>
+<p class="p3">Macintosh:~ manunaudin$<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+</body>
+</html>

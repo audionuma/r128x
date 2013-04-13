@@ -47,7 +47,7 @@
 }
 
 - (void) progressUpdate: (NSNotification *) notification {
-    NSNumber *f = [notification object];
-    //printf("%.1f\n", [f floatValue]);
+    float ratio = [[notification object] floatValue];
+    printf("%3d%% \n\033[F\033[J", (int)(ratio));
 }
 @end

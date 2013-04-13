@@ -1,10 +1,10 @@
-
 # r128x, a command line tool for loudness measurement of files on Mac OSX Intel. #
 # with gui now !
 #
 
 ## Binaries ##
 r128x-cli https://www.dropbox.com/s/iqiv96ngwhufwby/r128x-cli-0-2.zip
+
 r128x-gui https://www.dropbox.com/s/2r1ypokkc23wj2y/r128x-gui-0-2.zip
  
 v 0.2 2013-04-13

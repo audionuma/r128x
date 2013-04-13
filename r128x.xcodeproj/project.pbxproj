@@ -7,47 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		564C37131605ABFC00C3F184 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C37121605ABFC00C3F184 /* CoreFoundation.framework */; };
-		564C37161605ABFC00C3F184 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37151605ABFC00C3F184 /* main.c */; };
-		564C37181605ABFC00C3F184 /* r128x.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 564C37171605ABFC00C3F184 /* r128x.1 */; };
-		564C37251605AD0100C3F184 /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
-		564C37311605B1CE00C3F184 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C37301605B1CE00C3F184 /* AudioToolbox.framework */; };
-		564C37331605B3FA00C3F184 /* fileprocessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37321605B3FA00C3F184 /* fileprocessor.c */; };
+		565EC47417127B49008B09A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565EC47317127B49008B09A2 /* Foundation.framework */; };
+		565EC47717127B49008B09A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565EC47617127B49008B09A2 /* main.m */; };
+		565EC47B17127B49008B09A2 /* r128x_cli.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 565EC47A17127B49008B09A2 /* r128x_cli.1 */; };
+		565EC48117128083008B09A2 /* CliController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565EC48017128083008B09A2 /* CliController.m */; };
+		565EC48217128162008B09A2 /* ExtAudioProcessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */; };
+		565EC483171282A4008B09A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C37301605B1CE00C3F184 /* AudioToolbox.framework */; };
+		565EC48417128305008B09A2 /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
+		56CAF8C817132C480027800C /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CAF8C717132C480027800C /* MainWindow.m */; };
+		F5CDA33B1713162E001649E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CDA33A1713162E001649E7 /* Cocoa.framework */; };
+		F5CDA3451713162E001649E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA3431713162E001649E7 /* InfoPlist.strings */; };
+		F5CDA3471713162E001649E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CDA3461713162E001649E7 /* main.m */; };
+		F5CDA34B1713162E001649E7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA3491713162E001649E7 /* Credits.rtf */; };
+		F5CDA34E1713162E001649E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CDA34D1713162E001649E7 /* AppDelegate.m */; };
+		F5CDA35617131726001649E7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA35517131726001649E7 /* MainMenu.xib */; };
+		F5CDA35717131875001649E7 /* ExtAudioProcessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */; };
+		F5CDA35A17131924001649E7 /* FileReport.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CDA35917131924001649E7 /* FileReport.m */; };
+		F5CDA35B17131993001649E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C37301605B1CE00C3F184 /* AudioToolbox.framework */; };
+		F5CDA35C171319BB001649E7 /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		564C370C1605ABFC00C3F184 /* CopyFiles */ = {
+		565EC47017127B49008B09A2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				564C37181605ABFC00C3F184 /* r128x.1 in CopyFiles */,
+				565EC47B17127B49008B09A2 /* r128x_cli.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		564C370E1605ABFC00C3F184 /* r128x */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = r128x; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C37121605ABFC00C3F184 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		564C37151605ABFC00C3F184 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		564C37171605ABFC00C3F184 /* r128x.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = r128x.1; sourceTree = "<group>"; };
 		564C37201605AD0100C3F184 /* ebur128.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ebur128.c; sourceTree = "<group>"; };
 		564C37211605AD0100C3F184 /* ebur128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebur128.h; sourceTree = "<group>"; };
-		564C37241605AD0100C3F184 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
-		564C372E1605B16B00C3F184 /* fileprocessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileprocessor.h; sourceTree = "<group>"; };
+		564C372E1605B16B00C3F184 /* ExtAudioProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExtAudioProcessor.h; path = r128x/ExtAudioProcessor.h; sourceTree = "<group>"; };
 		564C37301605B1CE00C3F184 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		564C37321605B3FA00C3F184 /* fileprocessor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileprocessor.c; sourceTree = "<group>"; };
+		564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ExtAudioProcessor.c; path = r128x/ExtAudioProcessor.c; sourceTree = "<group>"; };
+		565EC47217127B49008B09A2 /* r128x-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "r128x-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		565EC47317127B49008B09A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		565EC47617127B49008B09A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		565EC47917127B49008B09A2 /* r128x-cli-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "r128x-cli-Prefix.pch"; sourceTree = "<group>"; };
+		565EC47A17127B49008B09A2 /* r128x_cli.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = r128x_cli.1; sourceTree = "<group>"; };
+		565EC47F17128083008B09A2 /* CliController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CliController.h; sourceTree = "<group>"; };
+		565EC48017128083008B09A2 /* CliController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CliController.m; sourceTree = "<group>"; };
+		56CAF8C617132C480027800C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		56CAF8C717132C480027800C /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		F5CDA3391713162E001649E7 /* r128x-gui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "r128x-gui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CDA33A1713162E001649E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F5CDA33D1713162E001649E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F5CDA33E1713162E001649E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F5CDA33F1713162E001649E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5CDA3421713162E001649E7 /* r128x-gui-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "r128x-gui-Info.plist"; sourceTree = "<group>"; };
+		F5CDA3441713162E001649E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5CDA3461713162E001649E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5CDA3481713162E001649E7 /* r128x-gui-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "r128x-gui-Prefix.pch"; sourceTree = "<group>"; };
+		F5CDA34A1713162E001649E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F5CDA34C1713162E001649E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5CDA34D1713162E001649E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5CDA35517131726001649E7 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		F5CDA35817131924001649E7 /* FileReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReport.h; sourceTree = "<group>"; };
+		F5CDA35917131924001649E7 /* FileReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		564C370B1605ABFC00C3F184 /* Frameworks */ = {
+		565EC46F17127B49008B09A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564C37311605B1CE00C3F184 /* AudioToolbox.framework in Frameworks */,
-				564C37131605ABFC00C3F184 /* CoreFoundation.framework in Frameworks */,
+				565EC483171282A4008B09A2 /* AudioToolbox.framework in Frameworks */,
+				565EC47417127B49008B09A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CDA3361713162E001649E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CDA35B17131993001649E7 /* AudioToolbox.framework in Frameworks */,
+				F5CDA33B1713162E001649E7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +98,11 @@
 		564C37031605ABFC00C3F184 = {
 			isa = PBXGroup;
 			children = (
+				564C372E1605B16B00C3F184 /* ExtAudioProcessor.h */,
+				564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */,
 				564C371E1605AD0100C3F184 /* ebur128 */,
-				564C37141605ABFC00C3F184 /* r128x */,
+				565EC47517127B49008B09A2 /* r128x-cli */,
+				F5CDA3401713162E001649E7 /* r128x-gui */,
 				564C37111605ABFC00C3F184 /* Frameworks */,
 				564C370F1605ABFC00C3F184 /* Products */,
 			);
@@ -67,7 +111,8 @@
 		564C370F1605ABFC00C3F184 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				564C370E1605ABFC00C3F184 /* r128x */,
+				565EC47217127B49008B09A2 /* r128x-cli */,
+				F5CDA3391713162E001649E7 /* r128x-gui.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,19 +122,11 @@
 			children = (
 				564C37301605B1CE00C3F184 /* AudioToolbox.framework */,
 				564C37121605ABFC00C3F184 /* CoreFoundation.framework */,
+				565EC47317127B49008B09A2 /* Foundation.framework */,
+				F5CDA33A1713162E001649E7 /* Cocoa.framework */,
+				F5CDA33C1713162E001649E7 /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		564C37141605ABFC00C3F184 /* r128x */ = {
-			isa = PBXGroup;
-			children = (
-				564C37151605ABFC00C3F184 /* main.c */,
-				564C37171605ABFC00C3F184 /* r128x.1 */,
-				564C372E1605B16B00C3F184 /* fileprocessor.h */,
-				564C37321605B3FA00C3F184 /* fileprocessor.c */,
-			);
-			path = r128x;
 			sourceTree = "<group>";
 		};
 		564C371E1605AD0100C3F184 /* ebur128 */ = {
@@ -97,46 +134,103 @@
 			children = (
 				564C37201605AD0100C3F184 /* ebur128.c */,
 				564C37211605AD0100C3F184 /* ebur128.h */,
-				564C37221605AD0100C3F184 /* queue */,
 			);
 			path = ebur128;
 			sourceTree = "<group>";
 		};
-		564C37221605AD0100C3F184 /* queue */ = {
+		565EC47517127B49008B09A2 /* r128x-cli */ = {
 			isa = PBXGroup;
 			children = (
-				564C37231605AD0100C3F184 /* sys */,
+				565EC47617127B49008B09A2 /* main.m */,
+				565EC47A17127B49008B09A2 /* r128x_cli.1 */,
+				565EC47817127B49008B09A2 /* Supporting Files */,
+				565EC47F17128083008B09A2 /* CliController.h */,
+				565EC48017128083008B09A2 /* CliController.m */,
 			);
-			path = queue;
+			path = "r128x-cli";
 			sourceTree = "<group>";
 		};
-		564C37231605AD0100C3F184 /* sys */ = {
+		565EC47817127B49008B09A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				564C37241605AD0100C3F184 /* queue.h */,
+				565EC47917127B49008B09A2 /* r128x-cli-Prefix.pch */,
 			);
-			path = sys;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5CDA33C1713162E001649E7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDA33D1713162E001649E7 /* AppKit.framework */,
+				F5CDA33E1713162E001649E7 /* CoreData.framework */,
+				F5CDA33F1713162E001649E7 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F5CDA3401713162E001649E7 /* r128x-gui */ = {
+			isa = PBXGroup;
+			children = (
+				56CAF8C617132C480027800C /* MainWindow.h */,
+				56CAF8C717132C480027800C /* MainWindow.m */,
+				F5CDA35817131924001649E7 /* FileReport.h */,
+				F5CDA35917131924001649E7 /* FileReport.m */,
+				F5CDA35517131726001649E7 /* MainMenu.xib */,
+				F5CDA34C1713162E001649E7 /* AppDelegate.h */,
+				F5CDA34D1713162E001649E7 /* AppDelegate.m */,
+				F5CDA3411713162E001649E7 /* Supporting Files */,
+			);
+			path = "r128x-gui";
+			sourceTree = "<group>";
+		};
+		F5CDA3411713162E001649E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDA3421713162E001649E7 /* r128x-gui-Info.plist */,
+				F5CDA3431713162E001649E7 /* InfoPlist.strings */,
+				F5CDA3461713162E001649E7 /* main.m */,
+				F5CDA3481713162E001649E7 /* r128x-gui-Prefix.pch */,
+				F5CDA3491713162E001649E7 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		564C370D1605ABFC00C3F184 /* r128x */ = {
+		565EC47117127B49008B09A2 /* r128x-cli */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 564C371B1605ABFC00C3F184 /* Build configuration list for PBXNativeTarget "r128x" */;
+			buildConfigurationList = 565EC47E17127B49008B09A2 /* Build configuration list for PBXNativeTarget "r128x-cli" */;
 			buildPhases = (
-				564C370A1605ABFC00C3F184 /* Sources */,
-				564C370B1605ABFC00C3F184 /* Frameworks */,
-				564C370C1605ABFC00C3F184 /* CopyFiles */,
+				565EC46E17127B49008B09A2 /* Sources */,
+				565EC46F17127B49008B09A2 /* Frameworks */,
+				565EC47017127B49008B09A2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = r128x;
-			productName = r128x;
-			productReference = 564C370E1605ABFC00C3F184 /* r128x */;
+			name = "r128x-cli";
+			productName = "r128x-cli";
+			productReference = 565EC47217127B49008B09A2 /* r128x-cli */;
 			productType = "com.apple.product-type.tool";
+		};
+		F5CDA3381713162E001649E7 /* r128x-gui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CDA3541713162F001649E7 /* Build configuration list for PBXNativeTarget "r128x-gui" */;
+			buildPhases = (
+				F5CDA3351713162E001649E7 /* Sources */,
+				F5CDA3361713162E001649E7 /* Frameworks */,
+				F5CDA3371713162E001649E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "r128x-gui";
+			productName = "r128x-gui";
+			productReference = F5CDA3391713162E001649E7 /* r128x-gui.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -144,7 +238,7 @@
 		564C37051605ABFC00C3F184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Manuel Naudin";
 			};
 			buildConfigurationList = 564C37081605ABFC00C3F184 /* Build configuration list for PBXProject "r128x" */;
@@ -159,23 +253,70 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				564C370D1605ABFC00C3F184 /* r128x */,
+				565EC47117127B49008B09A2 /* r128x-cli */,
+				F5CDA3381713162E001649E7 /* r128x-gui */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F5CDA3371713162E001649E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CDA3451713162E001649E7 /* InfoPlist.strings in Resources */,
+				F5CDA34B1713162E001649E7 /* Credits.rtf in Resources */,
+				F5CDA35617131726001649E7 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		564C370A1605ABFC00C3F184 /* Sources */ = {
+		565EC46E17127B49008B09A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564C37161605ABFC00C3F184 /* main.c in Sources */,
-				564C37251605AD0100C3F184 /* ebur128.c in Sources */,
-				564C37331605B3FA00C3F184 /* fileprocessor.c in Sources */,
+				565EC47717127B49008B09A2 /* main.m in Sources */,
+				565EC48117128083008B09A2 /* CliController.m in Sources */,
+				565EC48217128162008B09A2 /* ExtAudioProcessor.c in Sources */,
+				565EC48417128305008B09A2 /* ebur128.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CDA3351713162E001649E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CDA3471713162E001649E7 /* main.m in Sources */,
+				F5CDA34E1713162E001649E7 /* AppDelegate.m in Sources */,
+				F5CDA35717131875001649E7 /* ExtAudioProcessor.c in Sources */,
+				F5CDA35A17131924001649E7 /* FileReport.m in Sources */,
+				F5CDA35C171319BB001649E7 /* ebur128.c in Sources */,
+				56CAF8C817132C480027800C /* MainWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5CDA3431713162E001649E7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5CDA3441713162E001649E7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5CDA3491713162E001649E7 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5CDA34A1713162E001649E7 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		564C37191605ABFC00C3F184 /* Debug */ = {
@@ -226,17 +367,79 @@
 			};
 			name = Release;
 		};
-		564C371C1605ABFC00C3F184 /* Debug */ = {
+		565EC47C17127B49008B09A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "r128x-cli/r128x-cli-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		564C371D1605ABFC00C3F184 /* Release */ = {
+		565EC47D17127B49008B09A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CURRENT_PROJECT_VERSION = 0.2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "r128x-cli/r128x-cli-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5CDA3521713162F001649E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "r128x-gui/r128x-gui-Prefix.pch";
+				INFOPLIST_FILE = "r128x-gui/r128x-gui-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F5CDA3531713162F001649E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "r128x-gui/r128x-gui-Prefix.pch";
+				INFOPLIST_FILE = "r128x-gui/r128x-gui-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -252,11 +455,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		564C371B1605ABFC00C3F184 /* Build configuration list for PBXNativeTarget "r128x" */ = {
+		565EC47E17127B49008B09A2 /* Build configuration list for PBXNativeTarget "r128x-cli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				564C371C1605ABFC00C3F184 /* Debug */,
-				564C371D1605ABFC00C3F184 /* Release */,
+				565EC47C17127B49008B09A2 /* Debug */,
+				565EC47D17127B49008B09A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5CDA3541713162F001649E7 /* Build configuration list for PBXNativeTarget "r128x-gui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CDA3521713162F001649E7 /* Debug */,
+				F5CDA3531713162F001649E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

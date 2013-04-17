@@ -21,7 +21,17 @@
 
 - (id) initWithPath: (NSString *) thePath {
     if (self = [super init]) {
-        self.filePath = thePath;
+        
+    
+        
+        
+    self.filePath = thePath;
+    
+        
+        
+       
+        
+    
     }
     return self;
     

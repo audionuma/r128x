@@ -26,7 +26,7 @@
     self.filesQueue =[NSMutableArray arrayWithCapacity:1];
     [self.filesInQueueFld setStringValue:@"0"];
     [self.currentFileProcessedFld setStringValue:@""];
-    [self.progressIndicator setIntegerValue:0];
+    [self.progressIndicator setDoubleValue:0];
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
                                    selector:@selector(timerFire)
@@ -44,20 +44,53 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(progressUpdate:) name:@"R128X_Progress" object:nil];
 
 }
-- (IBAction)selectBtnPressed:(id)sender {
-    //NSLog(@"pressed");
-    NSOpenPanel *fileChooser = [NSOpenPanel openPanel];
-    [fileChooser setCanChooseDirectories:false];
-    [fileChooser setCanChooseFiles:true];
-    [fileChooser setAllowsMultipleSelection:true];
-    if ([fileChooser runModal] == NSOKButton) {
-        for (NSURL *fileURL in [fileChooser URLs]) {
-            [self.filesQueue addObject:[fileURL path]];
+
+- (IBAction)selectBtnPressed:(id)sender
+
+{
+    
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    
+    NSArray* fileTypes = [[NSArray alloc] initWithObjects:@"mp3", @"mp2", @"m4a", @"wav", @"aif", @"aiff", @"caf", @"alac", @"sd2", @"ac3", nil];
+    
+    [openPanel setAllowedFileTypes:fileTypes];
+    
+    [openPanel setAllowsMultipleSelection: YES];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setCanCreateDirectories:NO];
+    [openPanel setCanChooseFiles:YES];
+    
+    [openPanel setPrompt:@"Process"];
+    [openPanel setTitle:@"File Selector"];
+    [openPanel setMessage:@"Select Files ..."];
+    
+    
+    [openPanel beginSheetModalForWindow:mWindow completionHandler:^(NSInteger result) {
+        
+        if (result == NSFileHandlingPanelOKButton){
+            
+            
+            for (NSURL *url in [openPanel URLs]) {
+                
+                [self.filesQueue addObject:[url path]];
+                
+                
+            }
+            
         }
+        
+		[self updateView];
+        
+	    [self.progressIndicator setHidden:NO];
+        
     }
-    //[self.maintainer addToQueue:@"string"];
-    [self updateView];
+     
+     
+     
+     ];
+    
 }
+
 
 - (void) timerFire {
     //NSLog(@"fire !************************");
@@ -73,11 +106,17 @@
         //NSLog(@"nothing to do");
     }
     [self updateView];
+     
+     
 }
 
 - (void) updateView {
-    [self.progressIndicator setIntegerValue:0];
+    [self.progressIndicator setDoubleValue:0];
     [self.filesInQueueFld setStringValue:[NSString stringWithFormat:@"%ld", [self.filesQueue count]]];
+   
+    
+   
+     
 }
 
 - (void) droppedFiles: (NSNotification *) notification {
@@ -85,35 +124,96 @@
     //NSLog(@"dropped %ld", [files count]);
     for (NSString *path in files) {
         BOOL exist, isdir;
+        
+        
+        
+        
         exist = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isdir];
         if (exist && !isdir) {
             [self.filesQueue addObject:path];
             [self updateView];
+            
+            [self.progressIndicator setHidden:NO];
         }
     }
 }
 - (void) processedFiles: (NSNotification *) notification {
     [self updateView];
     FileReport *f = [notification object];
+    
     [self.myArrayController addObject:f];
+    [self.progressIndicator setHidden:YES];
+    
+    
+    
+    
 }
 - (void) processNextFileInQueue:(id)launcher {
     NSString *file = [self.filesQueue objectAtIndex:0];
     [self.filesQueue removeObjectAtIndex:0];
     FileReport *report = [[FileReport alloc] initWithPath:file];
-    [self.currentFileProcessedFld setStringValue:file];
+    
+    
+    NSString *theFile = [file lastPathComponent];
+    
+    
+    //[self.currentFileProcessedFld setStringValue:file];
+    [self.currentFileProcessedFld setStringValue:theFile];
+    
+
     [report doMeasure];
     //[self.filesProcessed addObject:report];
     [self.currentFileProcessedFld setStringValue:@""];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"R128X_FileProcessed"object:report];
+   
+    
+    
     //[launcher setIsWorking:false];
+    
+    
+    
+    
 }
 - (void) progressUpdate: (NSNotification *) notification {
     //NSLog(@"progress");
     NSNumber *f = [notification object];
-    [self.progressIndicator setIntegerValue:[f integerValue]];
+    [self.progressIndicator setDoubleValue:[f doubleValue]];
     //NSLog(@"%f", [f floatValue]);
+    [self.progressIndicator setHidden:NO]; // this fixed it ... !
+   
+   
 }
+
+
+////////
+
+- (void)windowWillClose:(NSNotification*)notification
+
+
+
+{
+	[mWindow setDelegate:nil];
+	[NSApp terminate:self];
+    
+    
+    
+    
+}
+
+
+-(IBAction)clearData:(id)sender
+
+{
+    
+    
+    NSArrayController *theArray = self.myArrayController;
+    [[theArray content] removeAllObjects];
+    [theArray rearrangeObjects];
+    
+}
+
+
+
 
 
 @end

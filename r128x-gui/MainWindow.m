@@ -38,6 +38,8 @@
             
         }
         
+        [progressIndicator setHidden:NO];
+        
     }
     
     return YES;

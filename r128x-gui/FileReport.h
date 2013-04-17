@@ -20,6 +20,7 @@
 
 @interface FileReport : NSObject
 @property NSString *filePath;
+@property NSString *fileName;
 @property double il, lra;
 @property Float32 maxTP;
 @property SInt32 status;

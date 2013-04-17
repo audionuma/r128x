@@ -26,7 +26,7 @@
         
         
     self.filePath = thePath;
-    
+    self.fileName = [self.filePath lastPathComponent];
         
         
        

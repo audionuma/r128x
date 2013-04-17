@@ -14,6 +14,7 @@
 		565EC48217128162008B09A2 /* ExtAudioProcessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */; };
 		565EC483171282A4008B09A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C37301605B1CE00C3F184 /* AudioToolbox.framework */; };
 		565EC48417128305008B09A2 /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
+		569979DF171F1094004678D6 /* r128x.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 569979DE171F1094004678D6 /* r128x.iconset */; };
 		56CAF8C817132C480027800C /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CAF8C717132C480027800C /* MainWindow.m */; };
 		F5CDA33B1713162E001649E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CDA33A1713162E001649E7 /* Cocoa.framework */; };
 		F5CDA3451713162E001649E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA3431713162E001649E7 /* InfoPlist.strings */; };
@@ -54,6 +55,7 @@
 		565EC47A17127B49008B09A2 /* r128x_cli.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = r128x_cli.1; sourceTree = "<group>"; };
 		565EC47F17128083008B09A2 /* CliController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CliController.h; sourceTree = "<group>"; };
 		565EC48017128083008B09A2 /* CliController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CliController.m; sourceTree = "<group>"; };
+		569979DE171F1094004678D6 /* r128x.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = r128x.iconset; sourceTree = "<group>"; };
 		56CAF8C617132C480027800C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		56CAF8C717132C480027800C /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		F5CDA3391713162E001649E7 /* r128x-gui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "r128x-gui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 		564C37031605ABFC00C3F184 = {
 			isa = PBXGroup;
 			children = (
+				569979DE171F1094004678D6 /* r128x.iconset */,
 				564C372E1605B16B00C3F184 /* ExtAudioProcessor.h */,
 				564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */,
 				564C371E1605AD0100C3F184 /* ebur128 */,
@@ -267,6 +270,7 @@
 				F5CDA3451713162E001649E7 /* InfoPlist.strings in Resources */,
 				F5CDA34B1713162E001649E7 /* Credits.rtf in Resources */,
 				F5CDA35617131726001649E7 /* MainMenu.xib in Resources */,
+				569979DF171F1094004678D6 /* r128x.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

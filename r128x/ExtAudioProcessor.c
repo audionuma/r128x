@@ -247,8 +247,8 @@ OSStatus ExtAudioReader (CFStringRef audioFilePath,
         {
             for (int j = 0; j < nChannels; j++)
             {
-                if (samples[(nChannels * i) + j] > maxTP)
-                    maxTP = samples[(nChannels * i) + j];
+                if (fabsf(samples[(nChannels * i) + j]) > maxTP)
+                    maxTP = fabsf(samples[(nChannels * i) + j]);
             }
         }
         if (err != noErr && err != 'insz')

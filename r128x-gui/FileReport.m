@@ -12,7 +12,7 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+// along with r128x.  If not, see <http://www.gnu.org/licenses/>.
 // copyright Manuel Naudin 2012-2013
 
 #import "FileReport.h"

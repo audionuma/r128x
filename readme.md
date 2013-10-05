@@ -15,7 +15,7 @@ v 0.21 2013-07-25
 ## Description ##
 r128x is a tool for measuring Integrated Loudness, Loudness range and Maximum True Peak of audio files on the Mac OS X system with an Intel processor.
 
-It uses libebeur128 (https://github.com/jiixyj/libebur128) for the Integrated Loudness and Loudness Range measures.
+It uses libebur128 (https://github.com/jiixyj/libebur128) for the Integrated Loudness and Loudness Range measures.
 
 It uses CoreAudio's AudioConverter service to oversample audio data and obtain the Maximum True Peak.
 

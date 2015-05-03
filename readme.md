@@ -6,9 +6,9 @@
 r128x is released under a GPL license.
 
 ## Binaries ##
-r128x-cli https://www.dropbox.com/s/59dfxzum42jc82v/r128x-cli-0-21.zip
+r128x-cli https://www.dropbox.com/s/lo1bxh2fzp6bgk6/r128x-cli-0-22.zip
 
-r128x-gui https://www.dropbox.com/s/tzkwccqhkybsn3q/r128x-gui-0-21.zip
+r128x-gui https://www.dropbox.com/s/rjdqzu8mvtoquvp/r128x-gui-0-22.zip
  
 v 0.21 2013-07-25
 (voir version Française plus bas)

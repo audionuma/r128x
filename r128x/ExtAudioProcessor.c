@@ -71,6 +71,7 @@ OSStatus ExtAudioConvCallback(AudioConverterRef inAudioConverter,
         framesInBuffer -= userData->mNeededFrames;
         pushedFrames += userData->mNeededFrames;
         userData->mNeededFrames = userData->mReportIntervalFrames;
+        CFRelease(cmom);
     }
     if (framesInBuffer > 0) {
         offset = (fileOutBuffer + (pushedFrames * converterInASBD.mChannelsPerFrame));

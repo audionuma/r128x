@@ -40,7 +40,7 @@
 - (void) doMeasure {
     OSStatus err = noErr;
     double il, lra;
-    Float32 max_tp;
+    double max_tp;
     //err = CAReader((__bridge CFStringRef)(self.filePath), &il, &lra, &max_tp);
     self.status = ExtAudioReader((__bridge CFStringRef)(self.filePath), &il, &lra, &max_tp);
     if (self.status != noErr) {

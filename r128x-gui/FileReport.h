@@ -22,7 +22,7 @@
 @property NSString *filePath;
 @property NSString *fileName;
 @property double il, lra;
-@property Float32 maxTP;
+@property double maxTP;
 @property SInt32 status;
 
 - (id) initWithPath: (NSString *) thePath;

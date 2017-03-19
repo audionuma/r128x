@@ -30,28 +30,30 @@ typedef struct ExtAudioData
     ebur128_state *mState;
     
     UInt32 mFileFramesRead;
-    UInt32 mFramesProduced;
-    UInt32 mNeededFrames;
-    UInt32 mReportIntervalFrames; //experimental block logging every interval
-    SInt64 fileLengthInFrames;
+    // UInt32 mFramesProduced;
+    // UInt32 mNeededFrames;
+    // UInt32 mReportIntervalFrames; //experimental block logging every interval
+    UInt64 fileLengthInFrames;
     
-    CFMutableArrayRef mBlocks; //to store momentary blocks
+    // CFMutableArrayRef mBlocks; //to store momentary blocks
     
     
 } ExtAudioData;
 
 // a callback for an ExtAudioReader that uses ExtAudioFileRead to get samples from a file
+/*
 OSStatus ExtAudioConvCallback(AudioConverterRef inAudioConverter,
                          UInt32 *ioNumberDataPackets,
                          AudioBufferList *ioData,
                          AudioStreamPacketDescription **outDataPacketDescription,
                          void *inUserData);
+*/
 
 // a function that will measure r128 descriptors from a file.
 // using ExtAudioConvCallback as callback
 OSStatus ExtAudioReader (CFStringRef audioFilePath,
                          double *il_p,
                          double *lra_p,
-                         Float32 *maxtp_p);
+                         double *maxtp_p);
 
 #endif

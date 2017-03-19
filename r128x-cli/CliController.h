@@ -19,8 +19,8 @@
 
 @interface CliController : NSObject
 @property NSString *filePath;
-@property double il, lra;
-@property Float32 maxTP;
+@property double il, lra, maxTP;
+// @property double maxTP;
 @property SInt32 status;
 
 - (id) initWithPath: (NSString *) thePath;

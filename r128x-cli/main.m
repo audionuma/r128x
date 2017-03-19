@@ -15,6 +15,7 @@
 // along with r128x.  If not, see <http://www.gnu.org/licenses/>.
 // copyright Manuel Naudin 2012-2013
 
+// version 0.3 
 
 #import <Foundation/Foundation.h>
 #import "CliController.h"

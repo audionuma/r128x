@@ -20,34 +20,34 @@
 
 @implementation CliController
 - (id) initWithPath: (NSString *) thePath {
-    if (self = [super init]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(progressUpdate:) name:@"R128X_Progress" object:nil];
-        self.filePath = thePath;
-    }
-    return self;
-    
+  if (self = [super init]) {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(progressUpdate:) name:@"R128X_Progress" object:nil];
+    self.filePath = thePath;
+  }
+  return self;
+  
 }
 
 - (void) doMeasure {
-    OSStatus err = noErr;
-    double il, lra;
-    Float32 max_tp;
-    self.status = ExtAudioReader((__bridge CFStringRef)(self.filePath), &il, &lra, &max_tp);
-    if (self.status != noErr) {
-        self.il = NAN;
-        self.lra = NAN;
-        self.maxTP = NAN;
-    } else {
-        self.il = il;
-        self.lra = lra;
-        self.maxTP = max_tp;
-        self.status = err;
-        //printf("%.1f %.1f %.1f\n", il, lra, max_tp);
-    }
+  OSStatus err = noErr;
+  double il, lra;
+  Float32 max_tp;
+  self.status = ExtAudioReader((__bridge CFStringRef)(self.filePath), &il, &lra, &max_tp);
+  if (self.status != noErr) {
+    self.il = NAN;
+    self.lra = NAN;
+    self.maxTP = NAN;
+  } else {
+    self.il = il;
+    self.lra = lra;
+    self.maxTP = max_tp;
+    self.status = err;
+    //printf("%.1f %.1f %.1f\n", il, lra, max_tp);
+  }
 }
 
 - (void) progressUpdate: (NSNotification *) notification {
-    float ratio = [[notification object] floatValue];
-    printf("%3d%% \n\033[F\033[J", (int)(ratio));
+  float ratio = [[notification object] floatValue];
+  fprintf(stderr, "%3d%% \n\033[F\033[J", (int)(ratio));
 }
 @end

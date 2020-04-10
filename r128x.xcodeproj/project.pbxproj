@@ -241,7 +241,7 @@
 		564C37051605ABFC00C3F184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Manuel Naudin";
 			};
 			buildConfigurationList = 564C37081605ABFC00C3F184 /* Build configuration list for PBXProject "r128x" */;
@@ -398,7 +398,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CURRENT_PROJECT_VERSION = 0.21;
+				CURRENT_PROJECT_VERSION = 0.3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "r128x-cli/r128x-cli-Prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -437,7 +437,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.21;
+				CURRENT_PROJECT_VERSION = 0.3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "r128x-gui/r128x-gui-Prefix.pch";
 				INFOPLIST_FILE = "r128x-gui/r128x-gui-Info.plist";

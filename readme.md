@@ -6,12 +6,10 @@
 r128x is released under a GPL license.
 
 ## Binaries ##
-r128x-cli https://www.dropbox.com/s/lo1bxh2fzp6bgk6/r128x-cli-0-22.zip
-
-r128x-gui https://www.dropbox.com/s/rjdqzu8mvtoquvp/r128x-gui-0-22.zip
  
-v 0.21 2013-07-25
+v 0.3 2020-04-11 binaries can be found in the _release_ tab.
 (voir version Française plus bas)
+
 ## Description ##
 r128x is a tool for measuring Integrated Loudness, Loudness range and Maximum True Peak of audio files on the Mac OS X system with an Intel processor.
 
@@ -46,7 +44,7 @@ As r128x uses CoreAudio to read audio files, only file formats/codecs supported 
 
 r128x est distribué sous licence GPL.
 
-v 0.21 25/07/2013
+v 0.3 11/04/2020
 ## Description ##
 r128x est une application pour la mesure du Loudness Intégré, du Loudness range et du Maximum True Peak de fichiers audio sur Mac OS X avec processeur Intel.
 

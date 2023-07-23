@@ -23,6 +23,8 @@
 		5BDCA1C42A6D6A4700F7202E /* IntelEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCA1C32A6D6A4700F7202E /* IntelEntry.swift */; };
 		5BDCA1C82A6D6CE200F7202E /* ExtAudioProcessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */; };
 		5BDCA1C92A6D6D1400F7202E /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
+		5BDCA1CC2A6D892F00F7202E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA3491713162E001649E7 /* Credits.rtf */; };
+		5BDCA1CF2A6D8AC500F7202E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BDCA1CD2A6D8AC500F7202E /* Localizable.strings */; };
 		F5CDA33B1713162E001649E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CDA33A1713162E001649E7 /* Cocoa.framework */; };
 		F5CDA3451713162E001649E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA3431713162E001649E7 /* InfoPlist.strings */; };
 		F5CDA3471713162E001649E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CDA3461713162E001649E7 /* main.m */; };
@@ -73,6 +75,9 @@
 		5BDCA1BE2A6D51D500F7202E /* r128x_swiftui.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = r128x_swiftui.entitlements; sourceTree = "<group>"; };
 		5BDCA1C32A6D6A4700F7202E /* IntelEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelEntry.swift; sourceTree = "<group>"; };
 		5BDCA1C52A6D6CC600F7202E /* r128x-swiftui-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "r128x-swiftui-Bridging-Header.h"; sourceTree = "<group>"; };
+		5BDCA1CA2A6D86AF00F7202E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BDCA1CB2A6D86AF00F7202E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5BDCA1CE2A6D8AC500F7202E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5CDA3391713162E001649E7 /* r128x-gui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "r128x-gui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDA33A1713162E001649E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F5CDA33D1713162E001649E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +127,7 @@
 		564C37031605ABFC00C3F184 = {
 			isa = PBXGroup;
 			children = (
+				F5CDA3491713162E001649E7 /* Credits.rtf */,
 				5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */,
 				564C372E1605B16B00C3F184 /* ExtAudioProcessor.h */,
 				564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */,
@@ -188,6 +194,7 @@
 		5BDCA1B42A6D51D400F7202E /* r128x-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				5BDCA1CD2A6D8AC500F7202E /* Localizable.strings */,
 				5BDCA1B52A6D51D400F7202E /* MainApp.swift */,
 				5BDCA1B72A6D51D400F7202E /* MainView.swift */,
 				5BDCA1C32A6D6A4700F7202E /* IntelEntry.swift */,
@@ -239,7 +246,6 @@
 				F5CDA3431713162E001649E7 /* InfoPlist.strings */,
 				F5CDA3461713162E001649E7 /* main.m */,
 				F5CDA3481713162E001649E7 /* r128x-gui-Prefix.pch */,
-				F5CDA3491713162E001649E7 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 564C37031605ABFC00C3F184;
 			productRefGroup = 564C370F1605ABFC00C3F184 /* Products */;
@@ -341,6 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDCA1BD2A6D51D500F7202E /* Preview Assets.xcassets in Resources */,
+				5BDCA1CF2A6D8AC500F7202E /* Localizable.strings in Resources */,
+				5BDCA1CC2A6D892F00F7202E /* Credits.rtf in Resources */,
 				5BDCA1C22A6D51E900F7202E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,10 +407,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5BDCA1CD2A6D8AC500F7202E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BDCA1CE2A6D8AC500F7202E /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F5CDA3431713162E001649E7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F5CDA3441713162E001649E7 /* en */,
+				5BDCA1CA2A6D86AF00F7202E /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -410,6 +428,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F5CDA34A1713162E001649E7 /* en */,
+				5BDCA1CB2A6D86AF00F7202E /* fr */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";

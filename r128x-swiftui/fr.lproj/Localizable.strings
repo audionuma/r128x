@@ -1,0 +1,12 @@
+"Add Files" = "Ajouter des Fichiers";
+"All files are processed successfully." = "Tous les fichiers ont été traités avec succès.";
+"All files are processed, excepting %d failed files." = "Tous les fichiers sont traités, à l'exception des fichiers ayant échoué %d.";
+"Clear Table" = "Effacer le Tableau";
+"dBTP" = "dBTP";
+"Drag audio files from Finder to the table in this window." = "Faites glisser les fichiers audio du Finder vers le tableau de cette fenêtre.";
+"File Name" = "Nom de Fichier";
+"Loudness Range" = "Plage d'Intensité Sonore";
+"Processing files in the queue: %d remaining." = "Traitement des fichiers dans la file d'attente : %d restant.";
+"Program Loudness" = "Niveau Sonore Du Programme";
+"Reprocess All" = "Répéter le Processus";
+"Status" = "Statut";

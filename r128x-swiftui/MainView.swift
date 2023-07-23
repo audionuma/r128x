@@ -49,17 +49,17 @@ struct MainView: View {
 
   var queueMessage: String {
     if entries.isEmpty {
-      return "Drag audio files from Finder to the table in this window."
+      return NSLocalizedString("Drag audio files from Finder to the table in this window.", comment: "")
     }
     let filesPendingProcessing: Int = entries.filter(\.processed.negative).count
     let invalidResults: Int = entries.reduce(0) { $0 + ($1.status == .failed ? 1 : 0) }
     guard filesPendingProcessing == 0 else {
-      return "Processing files in the queue: \(filesPendingProcessing) remaining."
+      return String(format: NSLocalizedString("Processing files in the queue: %d remaining.", comment: ""), filesPendingProcessing)
     }
-    guard invalidResults != 0 else {
-      return "All files are processed, excepting \(invalidResults) failed files."
+    guard invalidResults == 0 else {
+      return String(format: NSLocalizedString("All files are processed, excepting %d failed files.", comment: ""), invalidResults)
     }
-    return "All files are processed, excepting those who have met possible errors."
+    return NSLocalizedString("All files are processed successfully.", comment: "")
   }
 
   var body: some View {
@@ -67,12 +67,13 @@ struct MainView: View {
       Table(entries, selection: $highlighted) {
         TableColumn("Status", value: \.statusDisplayed).width(50)
         TableColumn("File Name", value: \.fileName)
-        TableColumn("Program Loudness", value: \.programLoudnessDisplayed).width(110)
-        TableColumn("Loudness Range", value: \.loudnessRangeDisplayed).width(110)
-        TableColumn("dBTP", value: \.dBTPDisplayed).width(40)
+        TableColumn("Program Loudness", value: \.programLoudnessDisplayed).width(170)
+        TableColumn("Loudness Range", value: \.loudnessRangeDisplayed).width(140)
+        TableColumn("dBTP", value: \.dBTPDisplayed).width(50)
       }.onChange(of: entries) { _ in
         batchProcess(forced: false)
       }
+      .font(.system(.body).monospacedDigit())
       .onDrop(of: [UTType.fileURL], isTargeted: $dragOver) { providers -> Bool in
         var counter = 0
         defer {
@@ -107,7 +108,7 @@ struct MainView: View {
         Button("Clear Table") { entries.removeAll() }
         Button("Reprocess All") { batchProcess(forced: true) }
         ProgressView(value: progressValue) { Text(queueMessage).controlSize(.small) }
-        Spacer().frame(minWidth: 50)
+        Spacer()
       }.padding(.bottom, 10).padding([.horizontal], 10)
     }.frame(minWidth: 971, minHeight: 367, alignment: .center)
   }

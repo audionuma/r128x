@@ -23,8 +23,8 @@
     NSDragOperation sourceDragMask;
     sourceDragMask = [sender draggingSourceOperationMask];
     pboard = [sender draggingPasteboard];
-    if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
-        NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
+    if ( [[pboard types] containsObject:NSPasteboardTypeFileURL] ) {
+        NSArray *files = [pboard propertyListForType:NSPasteboardTypeFileURL];
         
         
         
@@ -61,7 +61,7 @@
     
     
     
-    if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
+    if ( [[pboard types] containsObject:NSPasteboardTypeFileURL] ) {
         
         if (sourceDragMask & NSDragOperationLink) {
             

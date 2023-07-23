@@ -38,7 +38,7 @@
     self.workingThread = nil;
     //[self.receiver registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(droppedFiles:) name:@"R128X_FilesDropped" object:nil];
-    [self.window registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
+    [self.window registerForDraggedTypes:[NSArray arrayWithObjects:NSPasteboardTypeFileURL, nil]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(droppedFiles:) name:@"R128X_FilesDropped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processedFiles:) name:@"R128X_FileProcessed" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(progressUpdate:) name:@"R128X_Progress" object:nil];
@@ -67,14 +67,9 @@
     
     [openPanel beginSheetModalForWindow:mWindow completionHandler:^(NSInteger result) {
         
-        if (result == NSFileHandlingPanelOKButton){
-            
-            
+        if (result == NSModalResponseOK ){
             for (NSURL *url in [openPanel URLs]) {
-                
                 [self.filesQueue addObject:[url path]];
-                
-                
             }
             
         }

@@ -16,6 +16,7 @@
 // copyright Manuel Naudin 2012-2013
 
 #import <Foundation/Foundation.h>
+
 #import "ExtAudioProcessor.h"
 
 @interface FileReport : NSObject
@@ -25,7 +26,7 @@
 @property Float32 maxTP;
 @property SInt32 status;
 
-- (id) initWithPath: (NSString *) thePath;
+- (id)initWithPath:(NSString *)thePath;
 
-- (void) doMeasure;
+- (void)doMeasure;
 @end

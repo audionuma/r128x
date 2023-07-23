@@ -17,10 +17,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainWindow : NSWindow{
-    
-    IBOutlet NSProgressIndicator *progressIndicator;
-    
+@interface MainWindow : NSWindow {
+  IBOutlet NSProgressIndicator *progressIndicator;
 }
 
 @end

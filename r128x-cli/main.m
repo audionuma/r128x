@@ -15,31 +15,36 @@
 // along with r128x.  If not, see <http://www.gnu.org/licenses/>.
 // copyright Manuel Naudin 2012-2013
 
-
 #import <Foundation/Foundation.h>
+
 #import "CliController.h"
 
-int main(int argc, const char * argv[])
-{
-    
-    @autoreleasepool {
-        if (argc < 2) {
-            printf("Missing arguments\nYou should specify at least one audio file\nr128x /some/file\n");
-            return 0;
-        } else {
-            CliController *controller = [[CliController alloc] init];
-            [[NSNotificationCenter defaultCenter] addObserver:controller selector:@selector(progressUpdate:) name:@"R128X_Progress" object:nil];
-            printf("%-40s%12s%12s%14s\n", "FILE", "IL (LUFS)", "LRA (LU)", "MAXTP (dBTP)");
-            for (int i = 1; i < argc; i++) {
-                [controller setFilePath:[NSString stringWithUTF8String:argv[i]]];
-                [controller doMeasure];
-                NSString *fileName = [[controller filePath] lastPathComponent];
-                //printf("%s\t %.1f\t%.1f\t%.1f\n", [fileName UTF8String], [controller il], [controller lra], [controller maxTP]);
-                printf("%-40s%+12.1f%+12.1f%+14.1f\n",[fileName UTF8String], [controller il], [controller lra], [controller maxTP]);
-            }
-        }
-        
+int main(int argc, const char *argv[]) {
+  @autoreleasepool {
+    if (argc < 2) {
+      printf(
+          "Missing arguments\nYou should specify at least one audio "
+          "file\nr128x /some/file\n");
+      return 0;
+    } else {
+      CliController *controller = [[CliController alloc] init];
+      [[NSNotificationCenter defaultCenter]
+          addObserver:controller
+             selector:@selector(progressUpdate:)
+                 name:@"R128X_Progress"
+               object:nil];
+      printf("%-40s%12s%12s%14s\n", "FILE", "IL (LUFS)", "LRA (LU)",
+             "MAXTP (dBTP)");
+      for (int i = 1; i < argc; i++) {
+        [controller setFilePath:[NSString stringWithUTF8String:argv[i]]];
+        [controller doMeasure];
+        NSString *fileName = [[controller filePath] lastPathComponent];
+        // printf("%s\t %.1f\t%.1f\t%.1f\n", [fileName UTF8String], [controller
+        // il], [controller lra], [controller maxTP]);
+        printf("%-40s%+12.1f%+12.1f%+14.1f\n", [fileName UTF8String],
+               [controller il], [controller lra], [controller maxTP]);
+      }
     }
-    return 0;
+  }
+  return 0;
 }
-

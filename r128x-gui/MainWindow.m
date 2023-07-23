@@ -18,65 +18,49 @@
 #import "MainWindow.h"
 
 @implementation MainWindow
-- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-    NSPasteboard *pboard;
-    NSDragOperation sourceDragMask;
-    sourceDragMask = [sender draggingSourceOperationMask];
-    pboard = [sender draggingPasteboard];
-    if ( [[pboard types] containsObject:NSPasteboardTypeFileURL] ) {
-        NSArray *files = [pboard propertyListForType:NSPasteboardTypeFileURL];
-        
-        
-        
-        // Depending on the dragging source and modifier keys,
-        
-        // the file data may be copied or linked
-        
-        if (sourceDragMask & NSDragOperationLink) {
-            //NSLog(@"dragA %ld", [files count]);
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"R128X_FilesDropped"object:files];
-            
-        }
-        
-        [progressIndicator setHidden:NO];
-        
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
+  NSPasteboard *pboard;
+  NSDragOperation sourceDragMask;
+  sourceDragMask = [sender draggingSourceOperationMask];
+  pboard = [sender draggingPasteboard];
+  if ([[pboard types] containsObject:NSPasteboardTypeFileURL]) {
+    NSArray *files = [pboard propertyListForType:NSPasteboardTypeFileURL];
+
+    // Depending on the dragging source and modifier keys,
+
+    // the file data may be copied or linked
+
+    if (sourceDragMask & NSDragOperationLink) {
+      // NSLog(@"dragA %ld", [files count]);
+      [[NSNotificationCenter defaultCenter]
+          postNotificationName:@"R128X_FilesDropped"
+                        object:files];
     }
-    
-    return YES;
-    
+
+    [progressIndicator setHidden:NO];
+  }
+
+  return YES;
 }
-- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
-    
-    NSPasteboard *pboard;
-    
-    NSDragOperation sourceDragMask;
-    
-    
-    
-    sourceDragMask = [sender draggingSourceOperationMask];
-    
-    pboard = [sender draggingPasteboard];
-    
-    
-    
-    
-    
-    if ( [[pboard types] containsObject:NSPasteboardTypeFileURL] ) {
-        
-        if (sourceDragMask & NSDragOperationLink) {
-            
-            return NSDragOperationLink;
-            
-        } else if (sourceDragMask & NSDragOperationCopy) {
-            
-            return NSDragOperationCopy;
-            
-        }
-        
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
+  NSPasteboard *pboard;
+
+  NSDragOperation sourceDragMask;
+
+  sourceDragMask = [sender draggingSourceOperationMask];
+
+  pboard = [sender draggingPasteboard];
+
+  if ([[pboard types] containsObject:NSPasteboardTypeFileURL]) {
+    if (sourceDragMask & NSDragOperationLink) {
+      return NSDragOperationLink;
+
+    } else if (sourceDragMask & NSDragOperationCopy) {
+      return NSDragOperationCopy;
     }
-    
-    return NSDragOperationNone;
-    
+  }
+
+  return NSDragOperationNone;
 }
 
 @end

@@ -17,41 +17,36 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>{
-    
-    IBOutlet NSWindow *mWindow;
-    
-    
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+  IBOutlet NSWindow *mWindow;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property(assign) IBOutlet NSWindow *window;
 
-
-@property (unsafe_unretained) IBOutlet NSButton *fileSelectBtn;
-@property (unsafe_unretained) IBOutlet NSTextField *filesInQueueFld;
-@property (unsafe_unretained) IBOutlet NSTextField *currentFileProcessedFld;
-@property (unsafe_unretained) IBOutlet NSArrayController *myArrayController;
-@property (unsafe_unretained) IBOutlet NSTableView *myTableView;
-//@property (unsafe_unretained) IBOutlet NSLevelIndicatorCell *progressIndicator;
-@property (unsafe_unretained) IBOutlet NSProgressIndicator *progressIndicator;
-
+@property(unsafe_unretained) IBOutlet NSButton *fileSelectBtn;
+@property(unsafe_unretained) IBOutlet NSTextField *filesInQueueFld;
+@property(unsafe_unretained) IBOutlet NSTextField *currentFileProcessedFld;
+@property(unsafe_unretained) IBOutlet NSArrayController *myArrayController;
+@property(unsafe_unretained) IBOutlet NSTableView *myTableView;
+//@property (unsafe_unretained) IBOutlet NSLevelIndicatorCell
+//*progressIndicator;
+@property(unsafe_unretained) IBOutlet NSProgressIndicator *progressIndicator;
 
 @property NSMutableArray *filesQueue;
 @property NSThread *workingThread;
 
 - (IBAction)selectBtnPressed:(id)sender;
 
-- (void) timerFire;
+- (void)timerFire;
 
-- (void) updateView;
+- (void)updateView;
 
-- (void) droppedFiles: (NSNotification *) notification;
+- (void)droppedFiles:(NSNotification *)notification;
 
-- (void) processedFiles: (NSNotification *) notification;
+- (void)processedFiles:(NSNotification *)notification;
 
-- (void) progressUpdate: (NSNotification *) notification;
+- (void)progressUpdate:(NSNotification *)notification;
 
--(IBAction)clearData:(id)sender;
-
+- (IBAction)clearData:(id)sender;
 
 @end

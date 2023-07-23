@@ -23,8 +23,8 @@
 @property Float32 maxTP;
 @property SInt32 status;
 
-- (id) initWithPath: (NSString *) thePath;
+- (id)initWithPath:(NSString *)thePath;
 
-- (void) doMeasure;
+- (void)doMeasure;
 
 @end

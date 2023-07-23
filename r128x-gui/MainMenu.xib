@@ -11,7 +11,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
                 <menuItem title="r128x" id="56">
@@ -205,7 +205,7 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="550">
-                        <rect key="frame" x="834" y="329" width="23" height="16"/>
+                        <rect key="frame" x="802" y="329" width="55" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="Label" usesSingleLineMode="YES" id="551">
                             <font key="font" metaFont="system"/>
@@ -222,7 +222,7 @@
                             <subviews>
                                 <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="572" id="570">
                                     <rect key="frame" x="0.0" y="0.0" width="929" height="235"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <tableViewGridLines key="gridStyleMask" vertical="YES"/>
@@ -242,7 +242,7 @@
                                                 <binding destination="567" name="value" keyPath="arrangedObjects.status" id="593"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn editable="NO" width="579.5" minWidth="40" maxWidth="1000" id="575">
+                                        <tableColumn editable="NO" width="550.5" minWidth="40" maxWidth="1000" id="575">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="File Name">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -365,9 +365,9 @@
                         </connections>
                     </button>
                     <button toolTip="Clear Data from Table ... (⌘0)" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="695">
-                        <rect key="frame" x="107" y="18" width="35" height="25"/>
+                        <rect key="frame" x="107" y="18" width="92" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="roundTextured" title="C" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="696">
+                        <buttonCell key="cell" type="roundTextured" title="Clear Table" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="696">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent">0</string>
@@ -379,20 +379,10 @@
                     </button>
                 </subviews>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="ACFFDF87-C912-4D05-93FF-6650B8439601" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="672">
-                <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="674"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="675"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="677"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="673"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="676"/>
-                </allowedToolbarItems>
-                <defaultToolbarItems/>
-            </toolbar>
             <connections>
                 <outlet property="delegate" destination="494" id="680"/>
             </connections>
-            <point key="canvasLocation" x="124" y="-138"/>
+            <point key="canvasLocation" x="123.5" y="-138.5"/>
         </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
@@ -401,7 +391,7 @@
                 <outlet property="filesInQueueFld" destination="550" id="554"/>
                 <outlet property="mWindow" destination="371" id="679"/>
                 <outlet property="myArrayController" destination="567" id="697"/>
-                <outlet property="myTableVIew" destination="570" id="694"/>
+                <outlet property="myTableView" destination="570" id="rKe-jh-1cZ"/>
                 <outlet property="progressIndicator" destination="678" id="681"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
@@ -415,6 +405,7 @@
                 <string>maxTP</string>
                 <string>fileName</string>
             </declaredKeys>
+            <classReference key="objectClass" className="FileReport"/>
         </arrayController>
         <customObject id="699" customClass="MainWindow">
             <connections>

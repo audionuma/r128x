@@ -58,6 +58,7 @@
 		56CAF8C617132C480027800C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		56CAF8C717132C480027800C /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BDCA1A72A6D4D2C00F7202E /* r128x-gui.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "r128x-gui.entitlements"; sourceTree = "<group>"; };
 		F5CDA3391713162E001649E7 /* r128x-gui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "r128x-gui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDA33A1713162E001649E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F5CDA33D1713162E001649E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -173,6 +174,7 @@
 		F5CDA3401713162E001649E7 /* r128x-gui */ = {
 			isa = PBXGroup;
 			children = (
+				5BDCA1A72A6D4D2C00F7202E /* r128x-gui.entitlements */,
 				56CAF8C617132C480027800C /* MainWindow.h */,
 				56CAF8C717132C480027800C /* MainWindow.m */,
 				F5CDA35817131924001649E7 /* FileReport.h */,
@@ -466,8 +468,10 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_ENTITLEMENTS = "r128x-gui/r128x-gui.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "r128x-gui/r128x-gui-Prefix.pch";
 				INFOPLIST_FILE = "r128x-gui/r128x-gui-Info.plist";
@@ -489,9 +493,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_ENTITLEMENTS = "r128x-gui/r128x-gui.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.3;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "r128x-gui/r128x-gui-Prefix.pch";
 				INFOPLIST_FILE = "r128x-gui/r128x-gui-Info.plist";

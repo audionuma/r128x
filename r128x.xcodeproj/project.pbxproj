@@ -16,6 +16,13 @@
 		565EC48417128305008B09A2 /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
 		56CAF8C817132C480027800C /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CAF8C717132C480027800C /* MainWindow.m */; };
 		5BDCA1A62A6D4C6B00F7202E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */; };
+		5BDCA1B62A6D51D400F7202E /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCA1B52A6D51D400F7202E /* MainApp.swift */; };
+		5BDCA1B82A6D51D400F7202E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCA1B72A6D51D400F7202E /* MainView.swift */; };
+		5BDCA1BD2A6D51D500F7202E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDCA1BC2A6D51D500F7202E /* Preview Assets.xcassets */; };
+		5BDCA1C22A6D51E900F7202E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */; };
+		5BDCA1C42A6D6A4700F7202E /* IntelEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCA1C32A6D6A4700F7202E /* IntelEntry.swift */; };
+		5BDCA1C82A6D6CE200F7202E /* ExtAudioProcessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */; };
+		5BDCA1C92A6D6D1400F7202E /* ebur128.c in Sources */ = {isa = PBXBuildFile; fileRef = 564C37201605AD0100C3F184 /* ebur128.c */; };
 		F5CDA33B1713162E001649E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CDA33A1713162E001649E7 /* Cocoa.framework */; };
 		F5CDA3451713162E001649E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5CDA3431713162E001649E7 /* InfoPlist.strings */; };
 		F5CDA3471713162E001649E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CDA3461713162E001649E7 /* main.m */; };
@@ -59,6 +66,13 @@
 		56CAF8C717132C480027800C /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BDCA1A72A6D4D2C00F7202E /* r128x-gui.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "r128x-gui.entitlements"; sourceTree = "<group>"; };
+		5BDCA1B32A6D51D400F7202E /* r128x-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "r128x-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDCA1B52A6D51D400F7202E /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		5BDCA1B72A6D51D400F7202E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5BDCA1BC2A6D51D500F7202E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BDCA1BE2A6D51D500F7202E /* r128x_swiftui.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = r128x_swiftui.entitlements; sourceTree = "<group>"; };
+		5BDCA1C32A6D6A4700F7202E /* IntelEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelEntry.swift; sourceTree = "<group>"; };
+		5BDCA1C52A6D6CC600F7202E /* r128x-swiftui-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "r128x-swiftui-Bridging-Header.h"; sourceTree = "<group>"; };
 		F5CDA3391713162E001649E7 /* r128x-gui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "r128x-gui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDA33A1713162E001649E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F5CDA33D1713162E001649E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -86,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BDCA1B02A6D51D400F7202E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5CDA3361713162E001649E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,11 +122,13 @@
 		564C37031605ABFC00C3F184 = {
 			isa = PBXGroup;
 			children = (
+				5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */,
 				564C372E1605B16B00C3F184 /* ExtAudioProcessor.h */,
 				564C37321605B3FA00C3F184 /* ExtAudioProcessor.c */,
 				564C371E1605AD0100C3F184 /* ebur128 */,
 				565EC47517127B49008B09A2 /* r128x-cli */,
 				F5CDA3401713162E001649E7 /* r128x-gui */,
+				5BDCA1B42A6D51D400F7202E /* r128x-swiftui */,
 				564C37111605ABFC00C3F184 /* Frameworks */,
 				564C370F1605ABFC00C3F184 /* Products */,
 			);
@@ -116,6 +139,7 @@
 			children = (
 				565EC47217127B49008B09A2 /* r128x-cli */,
 				F5CDA3391713162E001649E7 /* r128x-gui.app */,
+				5BDCA1B32A6D51D400F7202E /* r128x-swiftui.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +185,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5BDCA1B42A6D51D400F7202E /* r128x-swiftui */ = {
+			isa = PBXGroup;
+			children = (
+				5BDCA1B52A6D51D400F7202E /* MainApp.swift */,
+				5BDCA1B72A6D51D400F7202E /* MainView.swift */,
+				5BDCA1C32A6D6A4700F7202E /* IntelEntry.swift */,
+				5BDCA1BE2A6D51D500F7202E /* r128x_swiftui.entitlements */,
+				5BDCA1BB2A6D51D500F7202E /* Preview Content */,
+				5BDCA1C52A6D6CC600F7202E /* r128x-swiftui-Bridging-Header.h */,
+			);
+			path = "r128x-swiftui";
+			sourceTree = "<group>";
+		};
+		5BDCA1BB2A6D51D500F7202E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5BDCA1BC2A6D51D500F7202E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		F5CDA33C1713162E001649E7 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +235,6 @@
 		F5CDA3411713162E001649E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5BDCA1A52A6D4C6B00F7202E /* Assets.xcassets */,
 				F5CDA3421713162E001649E7 /* r128x-gui-Info.plist */,
 				F5CDA3431713162E001649E7 /* InfoPlist.strings */,
 				F5CDA3461713162E001649E7 /* main.m */,
@@ -220,6 +264,23 @@
 			productReference = 565EC47217127B49008B09A2 /* r128x-cli */;
 			productType = "com.apple.product-type.tool";
 		};
+		5BDCA1B22A6D51D400F7202E /* r128x-swiftui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDCA1C12A6D51D500F7202E /* Build configuration list for PBXNativeTarget "r128x-swiftui" */;
+			buildPhases = (
+				5BDCA1AF2A6D51D400F7202E /* Sources */,
+				5BDCA1B02A6D51D400F7202E /* Frameworks */,
+				5BDCA1B12A6D51D400F7202E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "r128x-swiftui";
+			productName = "r128x-swiftui";
+			productReference = 5BDCA1B32A6D51D400F7202E /* r128x-swiftui.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F5CDA3381713162E001649E7 /* r128x-gui */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5CDA3541713162F001649E7 /* Build configuration list for PBXNativeTarget "r128x-gui" */;
@@ -244,8 +305,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Manuel Naudin";
+				TargetAttributes = {
+					5BDCA1B22A6D51D400F7202E = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+					};
+				};
 			};
 			buildConfigurationList = 564C37081605ABFC00C3F184 /* Build configuration list for PBXProject "r128x" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -262,11 +330,21 @@
 			targets = (
 				565EC47117127B49008B09A2 /* r128x-cli */,
 				F5CDA3381713162E001649E7 /* r128x-gui */,
+				5BDCA1B22A6D51D400F7202E /* r128x-swiftui */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5BDCA1B12A6D51D400F7202E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDCA1BD2A6D51D500F7202E /* Preview Assets.xcassets in Resources */,
+				5BDCA1C22A6D51E900F7202E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5CDA3371713162E001649E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +367,18 @@
 				565EC48117128083008B09A2 /* CliController.m in Sources */,
 				565EC48217128162008B09A2 /* ExtAudioProcessor.c in Sources */,
 				565EC48417128305008B09A2 /* ebur128.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDCA1AF2A6D51D400F7202E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDCA1B82A6D51D400F7202E /* MainView.swift in Sources */,
+				5BDCA1C42A6D6A4700F7202E /* IntelEntry.swift in Sources */,
+				5BDCA1B62A6D51D400F7202E /* MainApp.swift in Sources */,
+				5BDCA1C82A6D6CE200F7202E /* ExtAudioProcessor.c in Sources */,
+				5BDCA1C92A6D6D1400F7202E /* ebur128.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +547,103 @@
 			};
 			name = Release;
 		};
+		5BDCA1BF2A6D51D500F7202E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "r128x-swiftui/r128x_swiftui.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"r128x-swiftui/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "r128x-swiftui";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Manuel Naudin & Shiki Suen. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.audionuma.r128x-swiftui";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "r128x-swiftui/r128x-swiftui-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5BDCA1C02A6D51D500F7202E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "r128x-swiftui/r128x_swiftui.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"r128x-swiftui/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "r128x-swiftui";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Manuel Naudin & Shiki Suen. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.audionuma.r128x-swiftui";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "r128x-swiftui/r128x-swiftui-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F5CDA3521713162F001649E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -525,6 +712,15 @@
 			buildConfigurations = (
 				565EC47C17127B49008B09A2 /* Debug */,
 				565EC47D17127B49008B09A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BDCA1C12A6D51D500F7202E /* Build configuration list for PBXNativeTarget "r128x-swiftui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDCA1BF2A6D51D500F7202E /* Debug */,
+				5BDCA1C02A6D51D500F7202E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

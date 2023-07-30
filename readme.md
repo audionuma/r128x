@@ -1,3 +1,7 @@
+**This project is now frozen as I'm not able to keep it alive on recent apple computers. You can go to https://github.com/ShikiSuen/r128x for an updated UI**
+
+**Ce projet est désormais figé car je ne peux plus développer sur des machines Apple récentes. Vous pouvez tester https://github.com/ShikiSuen/r128x pour une interface utilisateur mise à jour**
+
 # r128x, a tool for loudness measurement of files on Mac OSX Intel. #
 # with gui now !
 #
